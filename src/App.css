@@ -279,8 +279,20 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
     font-weight: 500;
     cursor: pointer;
 }
-
-
+.skillAnimation{
+animation:fluting 3s infinite linear;
+}
+@keyframes fluting{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(40%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 
 
 

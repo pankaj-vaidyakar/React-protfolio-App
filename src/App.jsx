@@ -130,7 +130,7 @@ function App() {
             </span>{" "}
             <span>VAIDYAKAR</span>
           </motion.h1>
-          
+
           <motion.div
             className="info"
             initial={{ opacity: 0 }}
@@ -368,12 +368,13 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
             <motion.div
               drag
-              initial={{ opacity: 0, y:-250 }}
+              initial={{ opacity: 0, y: -250 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 type: "spring",
@@ -393,6 +394,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
@@ -417,6 +419,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
@@ -441,6 +444,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
@@ -465,6 +469,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
@@ -489,6 +494,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
@@ -513,6 +519,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
@@ -537,6 +544,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
@@ -561,6 +569,7 @@ function App() {
                     borderRadius: "50%",
                     backgroundColor: "white",
                   }}
+                  className="skillAnimation"
                 />
               </span>
             </motion.div>
