@@ -161,7 +161,6 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
 /* full grayscale */
 .gray {
   filter: grayscale(100%);
- /
 }
 
 /* reveal color near cursor */
