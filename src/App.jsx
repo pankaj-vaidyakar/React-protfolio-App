@@ -30,6 +30,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 import { CiLocationOn } from "react-icons/ci";
 import { FiSend } from "react-icons/fi";
+import axios from 'axios'
 
 
 function App() {
@@ -47,6 +48,40 @@ function App() {
       page: "Ketchen Delivery UI",
     }  
   ];
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  // Handle Input
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Submit Form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post("http://localhost:5000/save-data", formData);
+
+      alert(res.data.message);
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.log(error);
+      alert("Error saving data");
+    }
+  };
 
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
@@ -835,13 +870,30 @@ function App() {
                   </p>
                 </span>
               </h2>
-              <form onSubmit={submit}>
-                <input type="text" id="name" placeholder="👨🏻‍💼 Your Name" />
-                <input type="email" id="email" placeholder="📧  Youe Email" />
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="👨🏻‍💼 Your Name"
+                  onChange={handleChange}
+                  name="name"
+                  value={formData.name}
+                />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="📧  Youe Email"
+                  onChange={handleChange}
+                  name="email"
+                  value={formData.email}
+                />
                 <textarea
                   name=""
                   id="message"
                   placeholder="✉ Your Message"
+                  onChange={handleChange}
+                  name="message"
+                  value={formData.message}
                 ></textarea>
                 <button type="submit">Send Message</button>
               </form>
