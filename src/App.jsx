@@ -1,17 +1,16 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import "./App.css";
 import { MdContacts } from "react-icons/md";
 import { IoIosContact } from "react-icons/io";
-import { motion, AnimatePresence, px } from "framer-motion";
+import { motion} from "framer-motion";
 import { FaCode } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import heroImg from "./assets/hero-3.png";
-import aboutImg from "./assets/pankaj.png";
+import aboutImg from "./assets/pankaj-1.png";
 import foodHut from "./assets/food-hut.png";
 import Chefsy from "./assets/chefsy.png";
+import socialMedia from "./assets/social-media.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Card from "./component/projectCard";
@@ -30,8 +29,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 import { CiLocationOn } from "react-icons/ci";
 import { FiSend } from "react-icons/fi";
-import axios from 'axios'
-
+import axios from "axios";
 
 function App() {
   const projectCard = [
@@ -46,7 +44,13 @@ function App() {
       name: "Chefsy:- Ketchen item Delivery Web App",
       para: "REAL PROJECT",
       page: "Ketchen Delivery UI",
-    }  
+    },
+    {
+      img: socialMedia,
+      name: "Ai-Powered Social Media Platform",
+      para: "REAL PROJECT",
+      page: "Social-Media UI",
+    },
   ];
 
   const [formData, setFormData] = useState({
@@ -77,6 +81,7 @@ function App() {
         email: "",
         phone: "",
       });
+      submit()
     } catch (error) {
       console.log(error);
       alert("Error saving data");
@@ -96,22 +101,19 @@ function App() {
     });
   };
 
-  const name = document.querySelector("#name")
-  const email = document.querySelector("#email")
-  const message = document.querySelector("#message")
-  function submit(){
-    event.preventDefault()
-   if(name.value===""||email.value===""||message.value ===""){
-    alert("Please Feel the Details")
-   }else{
-    alert("Successful Send a Message")
-    name.value=""
-    email.value=""
-    message.value=""
-
-   }
-    
-
+  const name = document.querySelector("#name");
+  const email = document.querySelector("#email");
+  const message = document.querySelector("#message");
+  function submit() {
+    event.preventDefault();
+    if (name.value === "" || email.value === "" || message.value === "") {
+      alert("Please Feel the Details");
+    } else {
+      alert("Successful Send a Message");
+      name.value = "";
+      email.value = "";
+      message.value = "";
+    }
   }
 
   return (
@@ -331,11 +333,11 @@ function App() {
                 transition={{ duration: 2, delay: 1 }}
                 viewport={{ once: true }}
                 src={aboutImg}
+                className="image"
                 style={{
-                  width: "360px",
                   height: "360px",
                   objectFit: "contain",
-                  borderRadius: "20px",
+                  borderRadius: "15px",
                   position: "relative",
                   // left: "750px",
                 }}
@@ -699,7 +701,7 @@ function App() {
               letterSpacing: "15px",
               zIndex: 1,
               position: "relative",
-              letterSpacing: "25px",
+              // letterSpacing: "25px",
             }}
           >
             CONTACT
@@ -905,4 +907,4 @@ function App() {
   );
 }
 
-export default App;  
+export default App;

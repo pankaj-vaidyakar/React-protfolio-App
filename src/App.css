@@ -195,6 +195,9 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
   align-items: center;
   margin-top: 60px;
 }
+#right>img{
+box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
 .skill-logo{
   /* border: 1px solid; */
   width: 100vh;
