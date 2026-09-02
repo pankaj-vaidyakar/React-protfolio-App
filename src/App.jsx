@@ -894,7 +894,7 @@ function App() {
                   id="message"
                   placeholder="✉ Your Message"
                   onChange={handleChange}
-                  name="message"
+                  // name="message"
                   value={formData.message}
                 ></textarea>
                 <button type="submit">Send Message</button>
